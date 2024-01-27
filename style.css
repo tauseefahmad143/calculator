@@ -81,6 +81,8 @@ form {
     box-shadow: 0px 0p 10px rgb(252, 23, 3);
 }
 h2 {
+    display:flex;
+    justify-content:center;
     margin-top: 7px;
     border: none;
     width:250px;
