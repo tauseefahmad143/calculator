@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.calculator.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <marquee behavior="scroll" direction="right"><h2>𝓣𝓪𝓾𝓼𝓮𝓮𝓯_𝓚𝓱𝓪𝓷</h2></marquee> 
+    <form action="" name="clc">
+        <div class="dis"></div>
+        <!-- <input  type="text" name="display" disabled class="dis"><br> -->
+        <input class="btn" type="button" value="AC" onclick="display.innerText =''">
+        <input class="btn" type="button" value="%" onclick="checkOperator();display.innerText+='%'">
+        <input class="btn" type="button" value="Del" onclick="display.innerText=display.innerText.toString().slice(0,-1)">
+        <input class="btn" type="button" value="/" onclick="checkOperator();display.innerText+='/'"><br>
+        <input class="btn" type="button" value="7" onclick="display.innerText+='7'">
+        <input class="btn" type="button" value="8" onclick="display.innerText+='8'">
+        <input class="btn" type="button" value="9" onclick="display.innerText+='9'">
+        <input class="btn" type="button" value="*" onclick="checkOperator();display.innerText+='*'"><br>
+        <input class="btn" type="button" value="4" onclick="display.innerText+='4'">
+        <input class="btn" type="button" value="5" onclick="display.innerText+='5'">
+        <input class="btn" type="button" value="6" onclick="display.innerText+='6'">
+        <input class="btn" type="button" value="-" onclick="checkOperator();display.innerText+='-'"><br>
+        <input class="btn" type="button" value="1" onclick="display.innerText+='1'">
+        <input class="btn" type="button" value="2" onclick="display.innerText+='2'">
+        <input class="btn" type="button" value="3" onclick="display.innerText+='3'">
+        <input class="btn" type="button" value="+" onclick="checkOperator();display.innerText+='+'" onclick="operatorClick('+')"><br>
+        <input class="btn" type="button" value="00" onclick="display.innerText+='00'">
+        <input class="btn" type="button" value="0" onclick="display.innerText+='0'">
+        <input class="btn" type="button" value="." onclick="display.innerText+='.'">
+        <input class="btn" type="button" value="=" onclick="display.innerText=eval(display.innerText)">
+    </form>
+
+</body>
+<script>
+    const display = document.querySelector('.dis')
+
+    function checkOperator(){
+        let displayOutput = display.innerText;
+        let lastcharacter = displayOutput[displayOutput.length - 1]
+        if(lastcharacter == '/' || lastcharacter == '+' || lastcharacter == '-' || lastcharacter == '*' || lastcharacter == '%')
+        {
+            document.querySelector('input[value=Del]').click();
+        }
+    }
+    document.onkeydown=function(event){
+        let element = document.querySelector(`input[value="${event.key}"]`)
+        console.log(event.key)
+        if(element != null){
+          
+                element.click();
+        
+        }
+        else{
+            if(event.key == 'Backspace'){
+                document.querySelector('input[value=Del]').click();
+            }
+            if(event.key == 'Delete'){
+                document.querySelector('input[value=Del]').click();
+            }
+            else if(event.key == 'Enter'){
+                document.querySelector('input[value="="]').click();
+            }
+        }
+
+    }
+</script>
+
+</html>
