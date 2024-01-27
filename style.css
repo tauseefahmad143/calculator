@@ -62,8 +62,9 @@ input , .dis{
 
 .dis{
     width: 300px;
+    overflow:hidden;
     margin-inline:auto;
-    height:40px;
+    height:200px;
     font-size: 30px;
     text-align: right;
     color: white;
