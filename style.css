@@ -90,6 +90,7 @@ h2 {
     color: #ffffff;
     padding: 10px;
     font-family: inherit;
+    text-align:center;
     /* font-weight: 500; */
    }
 @media screen and (max-width:350px){
