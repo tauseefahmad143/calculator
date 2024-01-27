@@ -39,7 +39,7 @@ input:active{
       }
       
 input , .dis{
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     padding: 10px;
     margin: 2px;
     margin-top:10px;
