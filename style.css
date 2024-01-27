@@ -8,7 +8,7 @@ body{
     background-color: #222;
 }
 input:active{
-    transition: all 0.2s ease;
+/*     transition: all 0.2s ease; */
     background-color: rgb(127, 127, 138);
     color: white;
     box-shadow: 0px 0px 5px black;
@@ -28,14 +28,14 @@ input:active{
         border: none;
         font-size: 16px;
         color: rgb(161, 161, 161);
-        transition: 500ms;
+/*         transition: 500ms; */
       }
       
       input:hover {
         box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
           inset -5px -5px 10px #444;
         color: #d6d6d6;
-        transition: 500ms;
+/*         transition: 500ms; */
       }
       
 input , .dis{
@@ -93,6 +93,8 @@ h2 {
     padding: 10px;
     font-family: inherit;
     text-align:center;
+    margin-left:auto;
+    margin-right:auto;
     /* font-weight: 500; */
    }
 @media screen and (max-width:350px){
