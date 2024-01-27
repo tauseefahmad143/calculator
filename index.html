@@ -56,15 +56,14 @@
         
         }
         else{
-            if(event.key == 'Backspace'){
-                document.querySelector('input[value=Del]').click();
-            }
-            if(event.key == 'Delete'){
-                document.querySelector('input[value=Del]').click();
-            }
-            else if(event.key == 'Enter'){
-                document.querySelector('input[value="="]').click();
-            }
+if (window.innerWidth >= 350) {
+    if (event.key === 'Backspace' || event.key === 'Delete') {
+        document.querySelector('input[value=Del]').click();
+    } else if (event.key === 'Enter') {
+        document.querySelector('input[value="="]').click();
+    }
+}
+
         }
 
     }
